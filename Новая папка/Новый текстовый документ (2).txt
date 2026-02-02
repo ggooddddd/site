@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер товаров</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        /* Стрелки по краям страницы */
+        .arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .arrow:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .arrow.left {
+            left: 20px;
+        }
+        
+        .arrow.right {
+            right: 20px;
+        }
+        
+        .arrow::before {
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            border-top: 4px solid #3498db;
+            border-left: 4px solid #3498db;
+        }
+        
+        .arrow.left::before {
+            transform: rotate(-45deg);
+        }
+        
+        .arrow.right::before {
+            transform: rotate(135deg);
+        }
+        
+        .slider-container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            display: flex;
+            padding: 40px;
+        }
+        
+        .slide-content {
+            display: flex;
+            width: 100%;
+            gap: 40px;
+        }
+        
+        .slide-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide-image img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .slide-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        .slide-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .slide-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .slide-description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .slide-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e74c3c;
+            margin: 15px 0;
+        }
+        
+        .slide-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: fit-content;
+            margin-top: 10px;
+        }
+        
+        .slide-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        /* Индикаторы слайдов */
+        .indicators {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            gap: 10px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: #3498db;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Стрелки навигации по краям страницы -->
+    <div class="arrow left" id="prevBtn"></div>
+    <div class="arrow right" id="nextBtn"></div>
+    
+    <div class="slider-container">
+        <!-- Слайдер -->
+        <div class="slider" id="slider">
+            <!-- Слайд 1 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-image">
+                        <img src="https://placehold.co/400x400/3498db/ffffff?text=Товар+1" alt="Товар 1">
+                    </div>
+                    <div class="slide-info">
+                        <h2 class="slide-title">Премиальный ноутбук</h2>
+                        <p class="slide-description">Мощный ноутбук с процессором нового поколения, 16 ГБ оперативной памяти и SSD на 1 ТБ. Идеален для работы и игр.</p>
+                        <div class="slide-price">45 990 ₽</div>
+                        <button class="slide-button">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Слайд 2 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-image">
+                        <img src="https://placehold.co/400x400/e74c3c/ffffff?text=Товар+2" alt="Товар 2">
+                    </div>
+                    <div class="slide-info">
+                        <h2 class="slide-title">Беспроводные наушники</h2>
+                        <p class="slide-description">Высококачественные наушники с шумоподавлением, поддержкой Bluetooth 5.0 и временем работы до 30 часов.</p>
+                        <div class="slide-price">12 490 ₽</div>
+                        <button class="slide-button">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Слайд 3 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-image">
+                        <img src="https://placehold.co/400x400/2ecc71/ffffff?text=Товар+3" alt="Товар 3">
+                    </div>
+                    <div class="slide-info">
+                        <h2 class="slide-title">Умные часы</h2>
+                        <p class="slide-description">Фитнес-трекер с мониторингом сердечного ритма, шагомером, уведомлениями и водонепроницаемым корпусом.</p>
+                        <div class="slide-price">18 790 ₽</div>
+                        <button class="slide-button">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Индикаторы слайдов -->
+        <div class="indicators" id="indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+        </div>
+    </div>
+
+    <script>
+        // Получаем элементы DOM
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        // Переменные состояния
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+        
+        // Функция для обновления слайдера
+        function updateSlider() {
+            // Вычисляем смещение для перемещения слайдера
+            const offset = -currentSlide * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+            
+            // Обновляем активный индикатор
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+        
+        // Обработчик клика по кнопке "Назад"
+        prevBtn.addEventListener('click', () => {
+            // Если текущий слайд первый, переходим к последнему
+            if (currentSlide === 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide--;
+            }
+            updateSlider();
+        });
+        
+        // Обработчик клика по кнопке "Вперед"
+        nextBtn.addEventListener('click', () => {
+            // Если текущий слайд последний, переходим к первому
+            if (currentSlide === totalSlides - 1) {
+                currentSlide = 0;
+            } else {
+                currentSlide++;
+            }
+            updateSlider();
+        });
+        
+        // Обработчик клика по индикаторам
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                // Получаем номер слайда из атрибута data-slide
+                currentSlide = parseInt(indicator.getAttribute('data-slide'));
+                updateSlider();
+            });
+        });
+    </script>
+</body>
+</html>
+
