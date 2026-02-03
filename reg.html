@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style/reg.css">
+</head>
+  <body>
+    <div>
+      <div>
+        <!--навигация-->
+        <div class="container">
+          <div class="nav_header_container">
+            <a href="developers.html" class="nav_item">Разработчикам</a>
+            <a href="authors.html" class="nav_item">Авторам</a>
+            <a href="gamers.html" class="nav_item">Геймерам</a>
+            <a href="investors.html" class="nav_item">Инвесторам</a>
+            <a href="advertising.html" class="nav_item">Реклама</a>
+          </div>
+        </div>
+      </div>
+      <header>
+        <div class="container">
+          <div class="header_container">
+            <a class="logo-btn" href="index.html">
+            <img src="/media/ARCHKEY.png" alt="logo" class="logo" />
+            </a>            
+            <button class="btn_catigories">
+              <img
+                src="/media/burger_catidories.png"
+                alt=""
+                class="icon_burger"
+              />Каталог
+            </button>
+            <div class="header_search">
+              <form class="search-form">
+                <input
+                  type="text"
+                  name="q"
+                  placeholder="  Поиск..."
+                  class="search-input"
+                  role="search"
+                />
+                <button class="search_btn" type="submit">
+                  <img src="/media/loupe.png" class="search_loupe" />
+                </button>
+              </form>
+            </div>
+            <div class="header_lk">
+              <button class="header_lk_btn">
+                <img src="/media/globus.png" class="globus_icon" />Личный кабинет
+              </button>
+            </div>
+            <div class="header_log-in">
+              <button class="header_log-in_btn">
+                <img src="/media/user.png" class="user_icon" />Вход/Регистрация
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="register-container">
+          <div class="register-card">
+            <h1 class="register-title">Регистрация</h1>
+            <p class="register-subtitle">Создайте аккаунт для доступа ко всем возможностям платформы Arch#key</p>
+            
+            <form id="registerForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Фамилия</label>
+                  <input 
+                    type="text" 
+                    id="lastName" 
+                    class="form-input" 
+                    placeholder="Иванов" 
+                    required
+                  >
+                  <div class="error-message" id="lastNameError">Пожалуйста, введите фамилию</div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="firstName" class="form-label">Имя</label>
+                  <input 
+                    type="text" 
+                    id="firstName" 
+                    class="form-input" 
+                    placeholder="Иван" 
+                    required
+                  >
+                  <div class="error-message" id="firstNameError">Пожалуйста, введите имя</div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">E-mail</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="form-input" 
+                  placeholder="example@mail.ru" 
+                  required
+                >
+                <div class="error-message" id="emailError">Пожалуйста, введите корректный email</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="birthdate" class="form-label">Дата рождения</label>
+                <input 
+                  type="date" 
+                  id="birthdate" 
+                  class="form-input" 
+                  required
+                >
+                <div class="error-message" id="birthdateError">Вы должны быть старше 18 лет</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone" class="form-label">Номер телефона</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  class="form-input" 
+                  placeholder="+7 (999) 999-99-99" 
+                  required
+                >
+                <div class="error-message" id="phoneError">Пожалуйста, введите корректный номер телефона</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="password" class="form-label">Пароль</label>
+                <div class="password-wrapper">
+                  <input 
+                    type="password" 
+                    id="password" 
+                    class="form-input" 
+                    placeholder="Минимум 8 символов" 
+                    required
+                  >
+                  <button type="button" class="toggle-password" id="togglePassword1">👁️</button>
+                </div>
+                <div class="error-message" id="passwordError">Пароль должен содержать минимум 8 символов</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="repeatPassword" class="form-label">Повтор пароля</label>
+                <div class="password-wrapper">
+                  <input 
+                    type="password" 
+                    id="repeatPassword" 
+                    class="form-input" 
+                    placeholder="Повторите пароль" 
+                    required
+                  >
+                  <button type="button" class="toggle-password" id="togglePassword2">👁️</button>
+                </div>
+                <div class="error-message" id="repeatPasswordError">Пароли не совпадают</div>
+              </div>
+              
+              <div class="consent-group">
+                <input type="checkbox" id="consent" class="consent-checkbox" required>
+                <label for="consent" class="consent-label">
+                  Я согласен на <a href="#">обработку персональных данных</a> и принимаю <a href="#">условия использования</a>
+                </label>
+              </div>
+              
+              <button type="submit" class="register-btn">Зарегистрироваться</button>
+            </form>
+            
+            <div class="divider">или</div>
+            
+            <div class="social-register">
+              <p class="social-register-title">Зарегистрироваться через социальные сети</p>
+              <div class="social-buttons">
+                <button class="social-btn google">G</button>
+                <button class="social-btn vk">VK</button>
+                <button class="social-btn telegram">T</button>
+              </div>
+            </div>
+            
+            <p class="login-link">Уже есть аккаунт? <a href="#">Войти</a></p>
+            
+            <div class="benefits-note">
+              <h3>Преимущества регистрации:</h3>
+              <ul class="benefits-list">
+                <li>Мгновенная доставка ключей игр</li>
+                <li>История всех покупок в одном месте</li>
+                <li>Персональные скидки и предложения</li>
+                <li>Доступ к закрытым распродажам</li>
+                <li>Подписка Arch#key Plus со скидкой 10%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Футер -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">ARCH#KEY</h3>
+            <p style="color:#bbb;font-size:16px;line-height:1.6;margin-top:15px">
+              Крупнейший магазин цифровых игр в СНГ. Огромная библиотека лицензионных игр по лучшим ценам.
+            </p>
+            <a href="https://logo-teka.com/max/"><img src="https://logo-teka.com/wp-content/uploads/2025/07/max-messenger-sign-logo.png" alt="PNG logo Max" style="max-width:50px;margin-top:15px" /></a>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">ПОКУПАТЕЛЯМ</h3>
+            <div class="footer-links">
+              <a href="#">Как купить игру</a>
+              <a href="#">Способы оплаты</a>
+              <a href="#">Гарантии и возврат</a>
+              <a href="#">Акции и скидки</a>
+              <a href="#">Подарочные карты</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">РАЗРАБОТЧИКАМ</h3>
+            <div class="footer-links">
+              <a href="#">Публикация игр</a>
+              <a href="#">Условия сотрудничества</a>
+              <a href="#">Маркетинг и продвижение</a>
+              <a href="#">Техническая поддержка</a>
+              <a href="#">Документация API</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">КОНТАКТЫ</h3>
+            <div class="footer-links">
+              <a href="#">support@archkey.ru</a>
+              <a href="#">partners@archkey.ru</a>
+              <a href="#">press@archkey.ru</a>
+              <a href="#">+7 (495) 123-45-67</a>
+              <a href="#">г. Москва, ул. Тверская, 1</a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2026 ARCH#KEY. Все права защищены. Использование материалов сайта разрешено только с письменного разрешения правообладателя.</p>
+          <button id="theme-toggle" class="theme-toggle-btn">
+            <span id="theme-icon">🌓</span>
+            <span id="theme-text">Сменить тему</span>
+          </button>
+        </div>
+      </footer>
+
+      <script>
+        // Theme toggle functionality without localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+          const html = document.documentElement;
+          const themeToggleBtn = document.getElementById('theme-toggle');
+          const themeIcon = document.getElementById('theme-icon');
+          const themeText = document.getElementById('theme-text');
+          
+          // Initialize button text based on current theme
+          function updateButtonText() {
+            if (html.classList.contains('light-theme')) {
+              themeIcon.textContent = '🌙';
+              themeText.textContent = 'Темная тема';
+            } else {
+              themeIcon.textContent = '☀️';
+              themeText.textContent = 'Светлая тема';
+            }
+          }
+          
+          // Set initial button text
+          updateButtonText();
+          
+          // Toggle theme on button click
+          themeToggleBtn.addEventListener('click', () => {
+            if (html.classList.contains('light-theme')) {
+              html.classList.remove('light-theme');
+            } else {
+              html.classList.add('light-theme');
+            }
+            updateButtonText();
+          });
+          
+          // Toggle password visibility
+          const togglePassword1 = document.getElementById('togglePassword1');
+          const passwordInput1 = document.getElementById('password');
+          const togglePassword2 = document.getElementById('togglePassword2');
+          const passwordInput2 = document.getElementById('repeatPassword');
+          
+          togglePassword1.addEventListener('click', () => {
+            const type = passwordInput1.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput1.setAttribute('type', type);
+            togglePassword1.textContent = type === 'password' ? '👁️' : '🙈';
+          });
+          
+          togglePassword2.addEventListener('click', () => {
+            const type = passwordInput2.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput2.setAttribute('type', type);
+            togglePassword2.textContent = type === 'password' ? '👁️' : '🙈';
+          });
+          
+          // Form validation
+          const registerForm = document.getElementById('registerForm');
+          const lastNameInput = document.getElementById('lastName');
+          const firstNameInput = document.getElementById('firstName');
+          const emailInput = document.getElementById('email');
+          const birthdateInput = document.getElementById('birthdate');
+          const phoneInput = document.getElementById('phone');
+          const passwordInput = document.getElementById('password');
+          const repeatPasswordInput = document.getElementById('repeatPassword');
+          const consentCheckbox = document.getElementById('consent');
+          
+          // Set max date for birthdate (18 years ago)
+          const today = new Date();
+          const maxDate = new Date();
+          maxDate.setFullYear(today.getFullYear() - 18);
+          birthdateInput.max = maxDate.toISOString().split('T')[0];
+          
+          // Phone input formatting
+          phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 0) {
+              value = '+' + value;
+            }
+            
+            if (value.length > 1 && value[1] !== '7') {
+              value = '+7' + value.substring(2);
+            }
+            
+            if (value.length > 2) {
+              value = value.substring(0, 2) + ' (' + value.substring(2);
+            }
+            if (value.length > 6) {
+              value = value.substring(0, 6) + ') ' + value.substring(6);
+            }
+            if (value.length > 11) {
+              value = value.substring(0, 11) + '-' + value.substring(11);
+            }
+            if (value.length > 14) {
+              value = value.substring(0, 14) + '-' + value.substring(14);
+            }
+            
+            e.target.value = value.substring(0, 18);
+          });
+          
+          // Form submission
+          registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Reset errors
+            document.querySelectorAll('.error-message').forEach(el => {
+              el.classList.remove('show');
+            });
+            
+            // Validate last name
+            if (!lastNameInput.value.trim()) {
+              document.getElementById('lastNameError').classList.add('show');
+              isValid = false;
+            }
+            
+            // Validate first name
+            if (!firstNameInput.value.trim()) {
+              document.getElementById('firstNameError').classList.add('show');
+              isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+              document.getElementById('emailError').classList.add('show');
+              isValid = false;
+            }
+            
+            // Validate birthdate (must be at least 18 years old)
+            const birthDate = new Date(birthdateInput.value);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+              age--;
+            }
+            
+            if (age < 18) {
+              document.getElementById('birthdateError').classList.add('show');
+              isValid = false;
+            }
+            
+            // Validate phone
+            const phoneValue = phoneInput.value.replace(/\D/g, '');
+            if (phoneValue.length < 11) {
+              document.getElementById('phoneError').classList.add('show');
+              isValid = false;
+            }
+            
+            // Validate password
+            if (passwordInput.value.length < 8) {
+              document.getElementById('passwordError').classList.add('show');
+              isValid = false;
+            }
+            
+            // Validate repeat password
+            if (passwordInput.value !== repeatPasswordInput.value) {
+              document.getElementById('repeatPasswordError').classList.add('show');
+              isValid = false;
+            }
+            
+            // Validate consent
+            if (!consentCheckbox.checked) {
+              alert('Пожалуйста, подтвердите согласие на обработку персональных данных');
+              isValid = false;
+            }
+            
+            if (isValid) {
+              alert(`Регистрация успешно завершена!\nДобро пожаловать, ${firstNameInput.value}!`);
+              // In real app: redirect to personal account
+              // window.location.href = 'personal-account.html';
+            }
+          });
+          
+          // Social register buttons
+          document.querySelectorAll('.social-btn').forEach(button => {
+            button.addEventListener('click', function() {
+              const platform = this.classList.contains('google') ? 'Google' : 
+                              this.classList.contains('vk') ? 'ВКонтакте' : 'Telegram';
+              alert(`Вы пытаетесь зарегистрироваться через ${platform}\nВ реальном приложении здесь была бы интеграция с OAuth`);
+            });
+          });
+          
+          // Login link
+          document.querySelector('.login-link a').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Перенаправление на страницу входа');
+            // In real app: window.location.href = 'login.html';
+          });
+        });
+      </script>
+    </body>
+
+</html>
