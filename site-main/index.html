@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин Arch#key</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <!--подключение ксс-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--подключение шрифтов-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <!--навигация-->
+        <div class="container">
+          <div class="nav_header_container">
+            <a
+              href="/developers.html"
+              class="nav_item"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Разработчикам</a
+            >
+            <a
+              href="/authors.html"
+              class="nav_item"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Авторам</a
+            >
+            <a
+              href="/gamers.html"
+              class="nav_item"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Геймерам</a
+            >
+            <a
+              href="/investors.html"
+              class="nav_item"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Инвесторам</a
+            >
+            <a
+              href="/ad.html"
+              class="nav_item"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Реклама</a
+            >
+          </div>
+        </div>
+        <!--rel="noopener" = Защита от вредоносного перенаправления-->
+        <!--rel="noreferrer" = Не передавать информацию об источнике перехода-->
+
+        <!--шапка-->
+      </div>
+      <header>
+        <div class="container">
+          <div class="header_container">
+            <a class="logo-btn" href="index.html">
+            <img src="/media/ARCHKEY.png" alt="logo" class="logo" />
+            </a>
+            <button class="btn_catigories">
+              <img
+                src="/media/burger_catidories.png"
+                alt=""
+                class="icon_burger"
+              />Каталог
+            </button>
+            <div class="header_search">
+              <form class="search-form">
+                <input
+                  type="text"
+                  name="q"
+                  placeholder="  Поиск..."
+                  class="search-input"
+                  role="search"
+                />
+                <button class="search_btn" type="submit">
+                  <img src="/media/loupe.png" class="search_loupe" />
+                </button>
+              </form>
+            </div>
+            <div class="header_lk">
+              <a class="header_lk_btn" href="lk.html">
+                <img src="/media/globus.png" class="globus_icon" />Личный кабинет
+              </a>
+            </div>
+            <div class="header_log-in">
+              <a class="header_log-in_btn" href="/login.html">
+                <img src="/media/user.png" class="user_icon" />Вход
+              </a>
+              / 
+              <a class="header_log-in_btn" href="/reg.html">
+                <img src="/media/user.png" class="user_icon" />Регистрация
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Стрелки навигации по краям страницы -->
+
+      <div class="container">
+        <div class="slider-wrapper">
+        <div class="arrow left" id="prevBtn"></div>
+        <div class="arrow right" id="nextBtn"></div>
+        <div class="slider-container">
+          <!-- Слайдер -->
+          <div class="slider" id="slider">
+            <!-- Слайд 1 -->
+            <div class="slide">
+              <div class="slide-content">
+                <div class="slide-image">
+                  <img src="/media/repo.png" alt="repo" />
+                </div>
+                <div class="slide-info">
+                  <h2 class="slide-title">REPO</h2>
+                  <p class="slide-description">
+                    Онлайн-игра в жанре хоррор с кооперативным режимом до 6
+                    игроков. Находите ценные, полностью реалистичные объекты и
+                    обращайтесь с ними бережно, извлекая и отбирая их, чтобы
+                    удовлетворить желания своего создателя.
+                  </p>
+                  <div class="slide-price">300 ₽</div>
+                  <button class="slide-button">Добавить в корзину</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="slide">
+              <div class="slide-content">
+                <div class="slide-image">
+                  <img src="/media/terraria.png" alt="terraria" />
+                </div>
+                <div class="slide-info">
+                  <h2 class="slide-title">Terraria</h2>
+                  <p class="slide-description">
+                    Копайте, сражайтесь, исследуйте, стройте! Нет ничего
+                    невозможного в этой насыщенной событиями приключенческой игре.
+                    Также доступен комплект для четверых!
+                  </p>
+                  <div class="slide-price">590 ₽</div>
+                  <button class="slide-button">Добавить в корзину</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="slide">
+              <div class="slide-content">
+                <div class="slide-image">
+                  <img src="/media/dota2.png" alt="dota2" />
+                </div>
+                <div class="slide-info">
+                  <h2 class="slide-title">Dota 2</h2>
+                  <p class="slide-description">
+                    Ежедневно миллионы игроков по всему миру сражаются от лица
+                    одного из более сотни героев Dota 2, и даже после тысячи часов
+                    в ней есть чему научиться.
+                  </p>
+                  <div class="slide-price">Бесплатно</div>
+                  <button class="slide-button">Добавить в корзину</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Индикаторы слайдов -->
+          <div class="indicators" id="indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <script>
+        // Получаем элементы DOM
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.indicator');
+
+        // Переменные состояния
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        // Функция для обновления слайдера
+        function updateSlider() {
+          // Вычисляем смещение для перемещения слайдера
+          const offset = -currentSlide * 100;
+          slider.style.transform = `translateX(${offset}%)`;
+
+          // Обновляем активный индикатор
+          indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+              indicator.classList.add('active');
+            } else {
+              indicator.classList.remove('active');
+            }
+          });
+        }
+
+        // Обработчик клика по кнопке "Назад"
+        prevBtn.addEventListener('click', () => {
+          // Если текущий слайд первый, переходим к последнему
+          if (currentSlide === 0) {
+            currentSlide = totalSlides - 1;
+          } else {
+            currentSlide--;
+          }
+          updateSlider();
+        });
+
+        // Обработчик клика по кнопке "Вперед"
+        nextBtn.addEventListener('click', () => {
+          // Если текущий слайд последний, переходим к первому
+          if (currentSlide === totalSlides - 1) {
+            currentSlide = 0;
+          } else {
+            currentSlide++;
+          }
+          updateSlider();
+        });
+
+        // Обработчик клика по индикаторам
+        indicators.forEach((indicator) => {
+          indicator.addEventListener('click', () => {
+            // Получаем номер слайда из атрибута data-slide
+            currentSlide = parseInt(indicator.getAttribute('data-slide'));
+            updateSlider();
+          });
+        });
+      </script>
+
+      <div class="container">
+        <div class="genres_games">
+          <div class="first_block">
+            <div class="genres-vav">
+              <div class="gname">
+                <h3>Жанры</h3>
+              </div>
+              <div class="genre_button">
+                <button class="g_btn">Экшен</button>
+                <button class="g_btn">Стратегия</button>
+                <button class="g_btn">Хоррор</button>
+                <button class="g_btn">Выживание</button>
+                <button class="g_btn">Бесплатное</button>
+                <button class="g_btn">Симулятор</button>
+              </div>
+            </div>
+            <div class="genres-finder-genre">
+              <div class="finder_box">
+                <form class="search-form-genre">
+                  <input
+                    type="text"
+                    name="q"
+                    placeholder="  Поиск по жанрам..."
+                    class="search-input-genre"
+                    role="search"
+                  />
+                  <button class="search_btn-genre" type="submit">
+                    <img src="/media/loupe.png" class="search_loupe-genre" />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="second_block">
+            <div class="sec-block-in">
+            <h2>Почему мы?</h2>
+            <p>1. Привлекательные цены</p>
+            <p>2. Лучшие цены</p>
+            <p>3. Поддержка 24/7</p>
+            <p>4. Быстрая покупка</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="popular">
+          <div class="card_game">
+              <img src="/media/media_popular/Rectangle 25.png" class="photo">
+              <h3>Counter-Strike 2</h3>
+              <p>Тактический шутер с напряжёнными раундами и бомбой</p>
+              <button class="buy_game">Приобрести</button>
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/gta.png" class="photo">
+              <h3>GTA V</h3>
+              <p>Криминальная сага в живом открытом мире</p>
+                          <button class="buy_game">Приобрести</button>
+
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/liga.png" class="photo">
+              <h3>LOL</h3>
+              <p>Командная MOBA с уникальными чемпионами и тактикой</p>
+                          <button class="buy_game">Приобрести</button>
+
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/witcher.png" class="photo">
+              <h3>Ведмак 3</h3>
+              <p>Мрачное фэнтези-путешествие за пропавшей дочерью</p>
+                          <button class="buy_game">Приобрести</button>
+
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/gate.png" class="photo">
+              <h3>Baldurs Gate</h3>
+              <p>Тактическая RPG по правилам Dungeons & Dragons</p>
+                          <button class="buy_game">Приобрести</button>
+
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/mine.png" class="photo">
+              <h3>Minecraft</h3>
+              <p>Бескрайняя кубическая песочница для строительства и выживания</p>
+                          <button class="buy_game">Приобрести</button>
+
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/fort.png" class="photo">
+              <h3>Fortnite</h3>
+              <p>Королевская битва со строительством и яркой эстетикой</p>
+             <button class="buy_game">Приобрести</button>
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/ow2.png" class="photo">
+              <h3>Owerwatch 2</h3>
+              <p>Командный шутер с героями и ультимейтами</p>
+             <button class="buy_game">Приобрести</button>
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/hades.png" class="photo">
+              <h3>Hades</h3>
+              <p>Динамичный рогалик-побег из подземного царства</p>
+              <button class="buy_game">Приобрести</button>
+          </div>
+          <div class="card_game">
+              <img src="/media/media_popular/ds3.png" class="photo">
+              <h3>Dark Souls 3</h3>
+              <p>Суровый боевик с методичными сражениями и атмосферой отчаяния</p>
+              <button class="buy_game">Приобрести</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+      <!-- Партнеры -->
+      <div class="partners-section">
+        <h2 class="section-title">ПАРТНЕРЫ</h2>
+        <div class="partners-grid">
+          <div class="partner-card">
+            <div class="partner-logo">S</div>
+            <div class="partner-name">SteamOS</div>
+            <div class="partner-desc">Официальная платформа для запуска игр на Linux</div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-logo">P</div>
+            <div class="partner-name">Proton</div>
+            <div class="partner-desc">Совместимость Windows-игр с Linux от Valve</div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-logo">L</div>
+            <div class="partner-name">Lutris</div>
+            <div class="partner-desc">Менеджер игр с открытым исходным кодом</div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-logo">W</div>
+            <div class="partner-name">Wine</div>
+            <div class="partner-desc">Слой совместимости для запуска Windows-приложений</div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-logo">M</div>
+            <div class="partner-name">MangoHud</div>
+            <div class="partner-desc">Оверлей для отображения FPS и системной информации</div>
+          </div>
+          <div class="partner-card">
+            <div class="partner-logo">G</div>
+            <div class="partner-name">GameMode</div>
+            <div class="partner-desc">Оптимизация производительности для игр на Linux</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">ARCH#KEY</h3>
+          <p style="color:#bbb;font-size:16px;line-height:1.6;margin-top:15px">
+            Крупнейший магазин цифровых игр в СНГ. Огромная библиотека лицензионных игр по лучшим ценам.
+          </p>
+          <a href="https://logo-teka.com/max/"><img src="https://logo-teka.com/wp-content/uploads/2025/07/max-messenger-sign-logo.png" alt="PNG logo Max" style="max-width:50px;" /></a>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">ПОКУПАТЕЛЯМ</h3>
+          <div class="footer-links">
+            <a href="#">Как купить игру</a>
+            <a href="#">Способы оплаты</a>
+            <a href="#">Гарантии и возврат</a>
+            <a href="#">Акции и скидки</a>
+            <a href="#">Подарочные карты</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">РАЗРАБОТЧИКАМ</h3>
+          <div class="footer-links">
+            <a href="#">Публикация игр</a>
+            <a href="#">Условия сотрудничества</a>
+            <a href="#">Маркетинг и продвижение</a>
+            <a href="#">Техническая поддержка</a>
+            <a href="#">Документация API</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">КОНТАКТЫ</h3>
+          <div class="footer-links">
+            <a href="#">support@archkey.ru</a>
+            <a href="#">partners@archkey.ru</a>
+            <a href="#">press@archkey.ru</a>
+            <a href="#">+7 (495) 123-45-67</a>
+            <a href="#">г. Москва, ул. Тверская, 1</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 ARCH#KEY. Все права защищены. Использование материалов сайта разрешено только с письменного разрешения правообладателя.</p>
+        <button id="theme-toggle" class="theme-toggle-btn">
+          <span id="theme-icon">🌓</span>
+          <span id="theme-text">Сменить тему</span>
+        </button>
+      </div>
+    </footer>
+
+    <script>
+      // Theme toggle functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        const html = document.documentElement;
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+        
+        // Load saved theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          html.classList.add('light-theme');
+          updateButtonText('dark');
+        } else {
+          updateButtonText('light');
+        }
+        
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+          if (html.classList.contains('light-theme')) {
+            html.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+            updateButtonText('light');
+          } else {
+            html.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+            updateButtonText('dark');
+          }
+        });
+        
+        // Update button text and icon based on current theme
+        function updateButtonText(nextTheme) {
+          if (nextTheme === 'dark') {
+            themeIcon.textContent = '🌙';
+            themeText.textContent = 'Темная тема';
+          } else {
+            themeIcon.textContent = '☀️';
+            themeText.textContent = 'Светлая тема';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

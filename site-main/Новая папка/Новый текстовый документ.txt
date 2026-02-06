@@ -1,0 +1,63 @@
+надо сделать слайдер в контейнере "recom_block" не большой слайдер
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Интернет-магазин Arch#key</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--подключение ксс-->
+  <link rel="preconnect" href="https://fonts.googleapis.com " />
+  <!--подключение шрифтов-->
+  <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost :ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+<div>
+  <!--навигация-->
+  <div class="container">
+  <div class="nav_header_container">
+    <a href="/developers.html" class="nav_item" target="_blank" rel="noopener noreferrer">Разработчикам</a>
+    <a href="/authors.html" class="nav_item" target="_blank" rel="noopener noreferrer">Авторам</a>
+    <a href="/gamers.html" class="nav_item" target="_blank" rel="noopener noreferrer">Геймерам</a>
+    <a href="/investors.html" class="nav_item" target="_blank" rel="noopener noreferrer">Инвесторам</a>
+    <a href="/advertising.html" class="nav_item" target="_blank" rel="noopener noreferrer">Реклама</a>
+  </div>
+  </div>
+  <!--rel="noopener" = Защита от вредоносного перенаправления-->
+  <!--rel="noreferrer" = Не передавать информацию об источнике перехода-->
+
+  <!--шапка-->
+</div>
+<header>
+  <div class="container">
+  <div class="header_container">
+    <img src="/media/ARCHKEY.png" alt="logo" class="logo" />
+    <button class="btn_catigories">
+      <img src="/media/burger_catidories.png" alt="" class="icon_burger" />Каталог
+    </button>
+    <div class="header_search">
+      <form class="search-form">
+        <input type="text" name="q" placeholder="  Поиск..." class="search-input" role="search" />
+        <button class="search_btn" type="submit">
+          <img src="/media/loupe.png" class="search_loupe" />
+        </button>
+      </form>
+    </div>
+    <div class="header_lk">
+      <button class="header_lk_btn">
+        <img src="/media/globus.png" class="globus_icon" />Личный кабинет
+      </button>
+    </div>
+    <div class="header_log-in">
+      <button class="header_log-in_btn">
+        <img src="/media/user.png" class="user_icon" />Вход/Регистрация
+      </button>
+    </div>
+  </div>
+  </div>
+</header>
+<div class="container">
+  <div class="recom_block">
+
